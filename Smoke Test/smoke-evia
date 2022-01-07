@@ -1,0 +1,8 @@
+#!/bin/bash
+
+. smoke.sh
+
+smoke_url_ok "https:somewebsite"
+    smoke_assert_body "some text"
+    smoke_form_ok "https:website" logindetails
+smoke_report
